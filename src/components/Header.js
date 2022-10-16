@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Header = () => (<h1>Magbank</h1>);
+const Header = ({ text, color }) => (<h1 style={{ color }}>{ text }</h1>);
 
 export default Header;
