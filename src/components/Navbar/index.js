@@ -6,21 +6,29 @@ import {Container,
   ButtonGroup,
   NavDropdown
 } from 'react-bootstrap';
-import './Navbar.scss';
+import './index.scss';
+import logo from '../../assets/logo.svg';
 
 const Navigation = () => (
-  <Navbar bg="light" expand="lg">
+  <Navbar expand="lg" variant="dark">
     <Container>
-      <Navbar.Brand href="#home">MAGBANK</Navbar.Brand>
+      <Navbar.Brand href="#home">
+        <img
+          src={logo}
+          height="30"
+          className="d-inline-block align-top"
+          alt="Magbank logo"
+        />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link href="#cartao">Cartão</Nav.Link>
           <Nav.Link href="#quemsomos">Quem Somos</Nav.Link>
-          <Nav.Link href="#faq">Faq</Nav.Link>
+          <Nav.Link href="#faq">FAQ</Nav.Link>
         </Nav>
         <ButtonGroup aria-label="Basic example">
-          <Button variant="outline-secondary">
+          <Button variant="outline-light">
             <NavDropdown title="Acessar minha conta" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -33,7 +41,7 @@ const Navigation = () => (
               </NavDropdown.Item>
             </NavDropdown>
           </Button>
-          <Button variant="outline-secondary">abra sua conta</Button>
+          <Button variant="outline-light">abra sua conta</Button>
         </ButtonGroup>
       </Navbar.Collapse>
     </Container>
