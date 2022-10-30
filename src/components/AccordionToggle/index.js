@@ -1,5 +1,7 @@
 import React from "react";
 
+import './index.scss';
+
 const AccordionToggle = ({ children, handleOnClick}) => {
   return (
       <button

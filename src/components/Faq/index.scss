@@ -34,30 +34,3 @@
     cursor: pointer;
   }
 }
-
-
-section div.faq-card {
-  background-color: unset;
-  
-  .card-header {
-      background-color: #362e4a;
-  }
-
-  .btn-link {
-      color: #fff;
-      text-decoration: none;
-      outline: unset;
-      text-align: left;
-      font-size: 0.9rem;
-      
-
-      @media screen and (min-width: 992px) {
-        font-size: 1rem;
-      }
-
-      
-      &:active {
-          color: #fff;
-      }
-  }
-}
