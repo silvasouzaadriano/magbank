@@ -21,10 +21,20 @@
     }
   }
 
+  .lead {
+    text-align: center;
+
+    @media screen and (min-width: 992px) {
+      text-align: left;
+    }
+  }
+
+
   &-clickable {
     cursor: pointer;
   }
 }
+
 
 section div.faq-card {
   background-color: unset;
@@ -37,6 +47,14 @@ section div.faq-card {
       color: #fff;
       text-decoration: none;
       outline: unset;
+      text-align: left;
+      font-size: 0.9rem;
+      
+
+      @media screen and (min-width: 992px) {
+        font-size: 1rem;
+      }
+
       
       &:active {
           color: #fff;
