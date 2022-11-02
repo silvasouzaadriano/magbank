@@ -4,10 +4,11 @@
   background-color: $color-primary;
   border-bottom: 0.2rem solid $color-secondary;
 
-  .dropdown-toggle.nav-link {
-    color: #fff;
+  .dropdown-item a {
+    color: #212529;
+    text-decoration: none;
   }
-
+ 
   .dropdown-toggle.nav-link:hover {
     color: #212529;
   }

@@ -8,6 +8,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer';
 import AccountModal from './components/AccountsModal';
 
+import Login from './pages/Login';
 import Home from './pages/Home';
 
 const AppRoutes = () => {
@@ -18,6 +19,8 @@ const AppRoutes = () => {
       <Navbar handleCreateAcc={() => setShowModal(true)} />
 
       <Routes>
+        <Route path='/login' element={ <Login /> } />
+
         <Route path='/' element={ <Home handleClick={() => setShowModal(true)} />} />
       </Routes>
 
