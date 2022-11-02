@@ -10,6 +10,7 @@ import AccountModal from './components/AccountsModal';
 
 import Login from './pages/Login';
 import Home from './pages/Home';
+import Dashboard from './pages/Dasboard';
 
 const AppRoutes = () => {
   const [showModal, setShowModal] = useState(false);
@@ -20,6 +21,8 @@ const AppRoutes = () => {
 
       <Routes>
         <Route path='/login' element={ <Login /> } />
+
+        <Route path='/dashboard' element={ <Dashboard /> } />
 
         <Route path='/' element={ <Home handleClick={() => setShowModal(true)} />} />
       </Routes>
