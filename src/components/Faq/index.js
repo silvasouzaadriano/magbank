@@ -31,7 +31,9 @@ const Faq = () => {
   return (
     <section className="faq text-light">
       <Container className="py-5">
-        <h2 className="my-5 faq-title"> Dúvidas frequentes</h2>
+        <Row className='justify-content-center'>
+          <h2 className='faq-title my-5'>Dúvidas frequentes</h2>
+        </Row>
         <Row className="d-flex align-items-center justify-content-center">
           <Col className='d-lg-none mb-5' xs={12}>
             <Row>
