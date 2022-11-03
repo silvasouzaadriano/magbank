@@ -14,8 +14,7 @@ import logo from '../../assets/logo.svg';
 const Navigation = ({ handleCreateAcc }) => (
   <Navbar variant='dark' expand='lg'>
     <Container>
-      <Navbar.Brand href='#home'>
-      <Link to='/'>
+      <Link to='/' className="navbar-brand">
         <img
           src={logo}
           height='30'
@@ -23,7 +22,6 @@ const Navigation = ({ handleCreateAcc }) => (
           alt='Magbank logo'
         />
       </Link>
-      </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='me-auto'>

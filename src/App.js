@@ -1,9 +1,9 @@
 import './App.scss';
-import AppRoutes from './Routes'
+import MainRoutes from './routes/Main/MainRoutes';
 
 const App = () => {
   return (
-    <AppRoutes />
+    <MainRoutes />
   );
 };
 

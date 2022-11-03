@@ -4,15 +4,15 @@ import {
   Routes, 
   Route 
 } from 'react-router-dom';
-import Navbar from './components/Navbar'
-import Footer from './components/Footer';
-import AccountModal from './components/AccountsModal';
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer';
+import AccountModal from '../../components/AccountsModal';
 
-import Login from './pages/Login';
-import Home from './pages/Home';
-import Dashboard from './pages/Dasboard';
+import Login from '../../pages/Login';
+import Home from '../../pages/Home';
+import Dashboard from '../../pages/Dasboard';
 
-const AppRoutes = () => {
+const MainRoutes = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -24,7 +24,7 @@ const AppRoutes = () => {
 
         <Route path='/dashboard' element={ <Dashboard /> } />
 
-        <Route path='/' element={ <Home handleClick={() => setShowModal(true)} />} />
+        <Route path='/' element={ <Home handleClick={() => setShowModal(true)} /> } />
       </Routes>
 
       <Footer />
@@ -33,4 +33,4 @@ const AppRoutes = () => {
   );
 }
 
-export default AppRoutes;
+export default MainRoutes;
