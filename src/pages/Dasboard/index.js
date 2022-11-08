@@ -1,13 +1,25 @@
-import React from 'react';
-import { Container, Row, Col, Button, Tabs, Tab, Table } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Routes, Route, Link } from "react-router-dom";
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import { latestData, futureData } from '../../data/dashboard';
+import  data from '../../data/dashboard';
+
+import AccountBalance from '../../components/AccountBalance';
+import AccountPayments from '../../components/AccountPayments';
+import AccountHistory from '../../components/AccountHistory';
 
 import './index.scss';
 
 const Dashboard = ({ className = false }) => {
+  const [activeLink, setActiveLink] = useState(0);
+
+  const links = [
+    { text: 'Minha Conta', path: '/dashboard' },
+    { text: 'Pagamentos', path: 'payments' },
+    { text: 'Extrato', path: 'history' },
+  ];
   return (
     <Container className={`dashboard py-5 ${className ? className : ''}`}>
       <Row>
@@ -25,98 +37,31 @@ const Dashboard = ({ className = false }) => {
               </span>
             </Col>
             <Col xs={9}>
-              <h4>Adriano Souza</h4>
+              <h4>Bruce Cantarim</h4>
               <p className='text-muted'>ag: 1234 c/c: 4321-5</p>
             </Col>
           </Row>
-          <Button
-            className='dashboard__button dashboard__button--active text-left'
-            variant='link'
-            size='lg'
-            block
-          >
-            Minha Conta
-          </Button>
-          <Button
-            className='dashboard__button text-left'
-            variant='link'
-            size='lg'
-            block
-          >
-            Pagamentos
-          </Button>
-          <Button
-            className='dashboard__button text-left'
-            variant='link'
-            size='lg'
-            block
-          >
-            Extrato
-          </Button>
+          {links.map(({ text, path }, key) => (
+            <Link className='dashboard__link' to={path} key={key}>
+              <Button
+                className={`dashboard__button text-left ${
+                  key === activeLink ? 'dashboard__button--active' : ''
+                }`}
+                variant='link'
+                size='lg'
+                block="true"
+                onClick={() => setActiveLink(key)}
+              >
+                {text}
+              </Button>
+            </Link>
+          ))}
         </Col>
-        <Col xs={12} lg={3} className='mt-lg-5 pt-lg-4'>
-          <h3 className='my-5'>Conta Corrente</h3>
-          <h6>
-            <small>
-              <strong>Saldo em conta corrente</strong>
-            </small>
-          </h6>
-          <h4 className='text-success mb-4'>
-            <small>R$ </small>3.500<small>,00</small>
-          </h4>
-          <h6>
-            <small>
-              <strong>Cheque especial</strong>
-            </small>
-          </h6>
-          <p className='mb-0'>Limite disponível</p>
-          <p className='mb-4'>R$ 5.000,00</p>
-          <Button variant='secondary'>Ver extrato</Button>
-        </Col>
-        <Col xs={12} lg={5} className='mt-lg-5 pt-lg-5'>
-          <Tabs className='mt-5 pt-lg-5' defaultActiveKey='latest'>
-            <Tab eventKey='latest' title='Últimos Lançamentos'>
-              <Table striped borderless>
-                <thead>
-                  <tr>
-                    <th>Data</th>
-                    <th>Descrição</th>
-                    <th>Valor (R$)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {latestData.map(({ date, description, value }) => (
-                    <tr>
-                      <td>{date}</td>
-                      <td>{description}</td>
-                      <td>{value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </Tab>
-            <Tab eventKey='future' title='Lançamentos Futuros'>
-              <Table striped borderless>
-                <thead>
-                  <tr>
-                    <th>Data</th>
-                    <th>Descrição</th>
-                    <th>Valor (R$)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {futureData.map(({ date, description, value }) => (
-                    <tr>
-                      <td>{date}</td>
-                      <td>{description}</td>
-                      <td>{value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </Tab>
-          </Tabs>
-        </Col>
+        <Routes>
+          <Route path="history" element={<AccountHistory data={data} />} />
+          <Route path="payments" element={<AccountPayments />} />
+          <Route path="/" element={<AccountBalance data={data} />} />
+        </Routes>
       </Row>
     </Container>
   );
