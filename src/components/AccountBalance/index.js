@@ -36,8 +36,8 @@ const AccountBalance = ({ data }) => {
                 </tr>
               </thead>
               <tbody>
-                {latestBalance.map(({ date, description, value }) => (
-                  <tr>
+                {latestBalance.map(({ date, description, value }, key) => (
+                  <tr key={key}>
                     <td>{date}</td>
                     <td>{description}</td>
                     <td>{value}</td>
@@ -56,8 +56,8 @@ const AccountBalance = ({ data }) => {
                 </tr>
               </thead>
               <tbody>
-                {futureBalance.map(({ date, description, value }) => (
-                  <tr>
+                {futureBalance.map(({ date, description, value }, key) => (
+                  <tr key={key}>
                     <td>{date}</td>
                     <td>{description}</td>
                     <td>{value}</td>
