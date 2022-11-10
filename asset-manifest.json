@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c05b8941.css",
+    "main.js": "/static/js/main.27ee5019.js",
+    "static/js/787.f80ed9fd.chunk.js": "/static/js/787.f80ed9fd.chunk.js",
+    "static/media/logo__magic-pay.png": "/static/media/logo__magic-pay.f0bdafd8ecdb98f8448c.png",
+    "static/media/logo__magic-pay--mobile.png": "/static/media/logo__magic-pay--mobile.e9747515ed612228c4f9.png",
+    "static/media/institutional.jpg": "/static/media/institutional.6ca025a0e8deb95a79a6.jpg",
+    "static/media/hero.jpg": "/static/media/hero.839f2765daf38ce4207e.jpg",
+    "static/media/post-3.jpg": "/static/media/post-3.3aba93697b9eab66465e.jpg",
+    "static/media/credit-card.jpg": "/static/media/credit-card.121452e3ea869c251d6e.jpg",
+    "static/media/MAGbank.svg": "/static/media/MAGbank.cd970cb42d717f1980895517fa68471b.svg",
+    "static/media/logo.svg": "/static/media/logo.851f31f3e6b20f3a66256766f59dffb3.svg",
+    "index.html": "/index.html",
+    "main.c05b8941.css.map": "/static/css/main.c05b8941.css.map",
+    "main.27ee5019.js.map": "/static/js/main.27ee5019.js.map",
+    "787.f80ed9fd.chunk.js.map": "/static/js/787.f80ed9fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c05b8941.css",
+    "static/js/main.27ee5019.js"
+  ]
+}
