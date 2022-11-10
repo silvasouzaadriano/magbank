@@ -1,11 +1,10 @@
-import Header from './components/Header'
+import './App.scss';
+import MainRoutes from './routes/Main/MainRoutes';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header text="Magbank é incrível!" color="#F00"/>
-    </div>
+    <MainRoutes />
   );
-}
+};
 
 export default App;

@@ -1,0 +1,25 @@
+@import '../../variables';
+
+.footer {
+  border-bottom: 0.2rem solid $color-secondary;
+}
+
+.logo {
+  margin-right: 15rem;
+
+  @media screen and (max-width:992px) {
+    margin-right: 0;
+  }
+  
+}
+
+
+.mb-5-mb-lg-0 {
+  padding: 3rem 0;
+
+  @media (min-width: 992px) {
+    padding: 0;
+  }
+}
+
+
